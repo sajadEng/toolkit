@@ -8,7 +8,7 @@ function Homepage() {
                     <h1>All in One Toolkit</h1>
                     <p>You don't need anything else</p>
                 </div>
-                <img src="/images/land image.png" alt="" />
+                <img src="/toolkit/images/land image.png" alt="" />
             </main>
             <div className="main-background"></div>
         </div>

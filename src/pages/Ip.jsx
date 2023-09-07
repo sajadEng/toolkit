@@ -127,7 +127,7 @@ function Ip() {
                     console.log(event.key);
                 }} />
                 <div className="ip-go-btn">
-                    <img src="/images/ip/icon-arrow.svg" className="ip" alt=">" onClick={main} />
+                    <img src="/toolkit/images/ip/icon-arrow.svg" className="ip" alt=">" onClick={main} />
                 </div>
             </label>
 

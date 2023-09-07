@@ -52,7 +52,7 @@ function App() {
         </Routes>
         {location.pathname !== '/' && location.pathname !== '/calc'  && 
           <Link className='go-home-btn' to='/'>
-            <img src="/images/home-icon.png" alt="Home" />
+            <img src="/toolkit/images/home-icon.png" alt="Home" />
           </Link>
       }
     </>
