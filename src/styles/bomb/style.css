@@ -1,0 +1,151 @@
+/* scripts */
+:root {
+	--no-fg: rgba(233, 233, 233, 0);
+	--fg: rgba(233, 233, 233, 1);
+	--flag-bg: rgb(30,190,50);
+	--un-flag-bg: darkcyan;
+}
+div.bomb-container {
+	padding: 3px;
+	display: grid;
+	grid-template-columns: repeat(10, 50px);
+	grid-template-rows: repeat(10, 50px);
+	gap: 5px;
+}
+div.bomb-block {
+	background: darkcyan;
+	transition: 30ms;
+}
+div.bomb-block * {
+	pointer-events: none;
+}
+div.un-opened-block {
+	color:	var(--no-fg);
+}
+div.opened-block {
+	color: var(--fg);
+	background: rgb(30, 30, 30);
+}
+div.flaged-block {
+	background: var(--flag-bg);
+}
+div.flaged-block::before {
+	content: '\1f6a9';
+	display: block;
+	font-size: 1.5rem;
+	position: absolute;
+	z-index: 10;
+	color: black;
+}
+div.un-opened-block .text {
+	display: none;
+}
+div.opened-block .text {
+	display: block;
+}
+div.bomb-game-info-div.hide-info {
+	top: -100px;
+}
+div.bomb-game-info-div.hide-info + .bomb-hide-btn {
+
+	transform: translate(0, -10px) rotate(180deg);
+}
+
+
+/* styles */
+body {
+	background: rgb(30,30,30);
+}
+div.bomb-block {
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+div.bomb-container {
+	background: linear-gradient(90deg,rgba(230, 230, 230, 0.1), rgba(230, 230, 230, 0.2));
+	border-radius: 5px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	aspect-ratio: 1/1;
+}
+div.bomb-game-info-div {
+	color: whitesmoke;
+	font-size: 3rem;
+	background: linear-gradient(90deg,rgba(230, 230, 230, 0.1), rgba(230, 230, 230, 0.2));
+	display: inline-block;
+	min-width: 50vw;
+	position: absolute;
+	top: 5px;
+	left: 50%;
+	transform: translateX(-50%);
+	padding-left: 30px;
+	display: flex;
+	align-items: center;
+	transition: all 150ms;
+}
+div.bomb-time {
+	flex: 1;
+}
+div.bomb-time::before {
+	content: '\23f1';
+}
+div.bomb-flags-count {
+	flex: 1;
+}
+div.bomb-flags-count::before {
+	content: '\1f6a9';
+}
+
+.bomb-hide-btn {
+	position: fixed;
+	top: 10px;
+	left: 10px;
+	transform: rotate(0deg);
+	transition: all 150ms;
+	font-size: 4rem;
+	font-weight: bold;
+	color: royalblue;
+	background: none;
+	border: none;
+}
+
+@media (max-width: 750px) {
+	div.bomb-container {
+		grid-template-columns: repeat(10, 30px);
+		grid-template-rows: repeat(10, 30px);
+		gap: 5px;
+	}
+	div.bomb-game-info-div {
+		font-size: 2rem;
+	}
+	div.flaged-block::before {
+		font-size: 1rem;
+	}
+}
+@media (max-width: 400px) {
+	div.bomb-container {
+		grid-template-columns: repeat(10, 25px);
+		grid-template-rows: repeat(10, 25px);
+		gap: 5px;
+	}
+	div.bomb-game-info-div {
+		font-size: 2rem;
+	}
+	div.flaged-block::before {
+		font-size: 0.8rem;
+	}
+}
+@media (max-width: 320px) {
+	div.bomb-container {
+		width: 99vw;
+		grid-template-columns: repeat(10, 1fr);
+		grid-template-rows: repeat(10, 1fr);
+		gap: 2px;
+	}
+	div.bomb-game-info-div {
+		font-size: 2rem;
+	}
+}

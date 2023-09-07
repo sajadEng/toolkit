@@ -1,0 +1,41 @@
+.anim-container {
+	width: 100px;
+	height: 100px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+}
+
+
+.anim-box {
+	animation: rotate-anim 5s infinite;
+}
+@keyframes rotate-anim {
+	from {
+		rotate: 0deg;
+	}
+	to {
+		rotate: 360deg;
+	}
+}
+
+.anim-box div {
+	width: 100%;
+	height: 100%;
+}
+.anim-box:nth-child(1) div {
+	background: royalblue;
+	border-radius:50px 0 0 0 ;
+}
+.anim-box:nth-child(2) div {
+	background: red;
+	border-radius:0 50px 0 0 ;
+}
+.anim-box:nth-child(3) div {
+	background: yellow;
+	border-radius:0 0 0 50px;
+}
+.anim-box:nth-child(4) div {
+	background: green;
+	border-radius:0 0 50px 0 ;
+}
