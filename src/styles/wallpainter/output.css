@@ -904,6 +904,7 @@ input.ip::placeholder {
   padding-top: var(--ip-header-height);
   position: relative;
   min-height: calc(100vh - var(--ip-header-height));
+  height: 100vh;
   display: flex;
   flex-direction: column;
 }

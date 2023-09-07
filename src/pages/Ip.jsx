@@ -119,7 +119,7 @@ function Ip() {
     return (
         <div className="ip-container">
         <div className="ip-header">
-            <img src="/images/ip/pattern-bg-desktop.png" alt="" className="ip-bg-pattern-img" />
+            <img src="/toolkit/images/ip/pattern-bg-desktop.png" alt="" className="ip-bg-pattern-img" />
             <h1 className="ip">IP Adress Tracker</h1>
             <label htmlFor="ip input" className="ip">
                 <input type="text" placeholder="Search for any IP address" name="ip input" className="ip" onKeyUp={event => {
