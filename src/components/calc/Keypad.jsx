@@ -19,7 +19,7 @@ function Keypad({numberKeyClickHandler, equalKeyClickHandler, clearBtnCLickHandl
 			<button className="clear-btn" onClick={clearBtnCLickHandler}>&#x219a;</button>
 			<button className="main-btns" onClick={numberKeyClickHandler}>0</button>
 			<button className="minor-btns equal-btn" onClick={equalKeyClickHandler}>=</button>
-            <button href="/" onClick={event => navigate('/')} className="minor-btns" style={{backgroundColor: 'white', boxShadow: 'none'}}><img src="/src/images/home-icon.png" width='35px' alt="" /></button>
+            <button href="/" onClick={event => navigate('/')} className="minor-btns" style={{backgroundColor: 'white', boxShadow: 'none'}}><img src="/images/home-icon.png" width='35px' alt="" /></button>
 		</div>
     )
 }

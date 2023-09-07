@@ -12,7 +12,7 @@ function HomeLogo() {
         <>
             <div className="homepage-title">
                 <div>
-                    <img className="homepage-logo-image" src="./src/images/wallpainter/logo.png" alt="Logo" />
+                    <img className="homepage-logo-image" src="/images/wallpainter/logo.png" alt="Logo" />
                     <span>W</span>
                     <span>a</span>
                     <span>l</span>
