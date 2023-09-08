@@ -1,6 +1,7 @@
 import { useSearchParams, Link } from "react-router-dom"
 import { useEffect, useState } from 'react'
 import Result from "../../components/wallpainter/Result";
+import { HOME_PAGE } from "../../data/general-data";
 
 function Search({state, dispatch}) {
     const [arrange, setArrange] = useState('acd');
@@ -58,7 +59,7 @@ function Search({state, dispatch}) {
     return (
         <div className="search">
             <div className="search-header">
-                <Link to='/wallpainter'>
+                <Link to={`${HOME_PAGE}/wallpainter`}>
                     <img src="/toolkit/images/wallpainter/logo.png" className="search-header--logo"/>
                 </Link>
                 <div className="search-header--menu">
@@ -76,8 +77,7 @@ function Search({state, dispatch}) {
                     </div>
                 </div>
                 { isLogedIn ? <p className="search-header-username">{JSON.parse(localStorage.getItem('login')).username}</p> :
-                    <Link to='/wallpainter/login' className="search-header-username">Login</Link> }
-                
+                    <Link to={`${HOME_PAGE}/wallpainter/login`} className="search-header-username">Login</Link> }
             </div>
             <h1 className="search-for">
                 <span className="search-for--text">{query} Wallpapers ({wallpapers.length})</span>

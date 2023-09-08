@@ -8,7 +8,7 @@ function Homepage({ isLogedIn, categories, dispatch }) {
     return (
         <div className="homepage">
             <div className="homepage-login">
-                <Link to='/login'>{!isLogedIn ? "Login" :  '' }</Link>
+                <Link to='login'>{!isLogedIn ? "Login" :  '' }</Link>
             </div>
             <HomeLogo />
             <Recommended categories={categories} dispatch={dispatch} />

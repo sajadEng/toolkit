@@ -40,7 +40,7 @@ div.container {
 		grid-column: 3/5;
 		width: unset !important;
 	}
-	button {
+	div.btns-div button {
 		width: 100%;
 		font-weight: bold;
 		font-size: 2rem;
@@ -83,7 +83,16 @@ button.equal-btn {
 	grid-column: 3/4;
 }
 *.vibrate-anim {
-	animation: vibrate-anim 150ms 1 ease both;
+	-webkit-animation: vibrate-anim 150ms 1 ease both;
+	        animation: vibrate-anim 150ms 1 ease both;
+}
+@-webkit-keyframes vibrate-anim {
+	1% {
+		transform: rotatez(15deg);
+	}
+	50% {
+		transform: rotateZ(-15deg);
+	}
 }
 @keyframes vibrate-anim {
 	1% {

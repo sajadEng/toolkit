@@ -2,9 +2,10 @@ import { Routes, Route, Link, useLocation } from "react-router-dom"
 import Homepage from "./pages/Homepage"
 import WallpainterLayout from './layouts/WallpainterLayout'
 import './styles/wallpainter/output.css'
+import { HOME_PAGE } from './data/general-data'
 
 //  =========== wallpainter ===========
-import { useReducer } from 'react'
+import { useReducer, useEffect } from 'react'
 
 // import pages
 import WallpainterHomepage from './pages/wallpainter/Homepage';
@@ -36,23 +37,27 @@ function App() {
 
     const [wallpainterState, wallpainterDispatch] = useReducer(reducer, initialState);
 
+    useEffect(function () {
+      console.log(location.pathname !== HOME_PAGE);
+    }, [])
+
     return (
     <>
         <Routes>
-            <Route path="/" element={<Homepage />} />
-            <Route path="/wallpainter" element={<WallpainterLayout />}>
+            <Route path={HOME_PAGE} element={<Homepage />} />
+            <Route path={`${HOME_PAGE}/wallpainter`} element={<WallpainterLayout />}>
                 <Route index element={<WallpainterHomepage isLogedIn={wallpainterState.isLogedIn} categories={wallpainterState.categories} dispatch={wallpainterDispatch} />} />
                 <Route path='login' element={<WallpainterLogin dispatch={wallpainterDispatch} />} />
                 <Route path='search' element={<WallpainterSearch dispatch={wallpainterDispatch} state={wallpainterState} />}  />
             </Route>
-            <Route path="ip" element={<Ip />} />
-            <Route path="/watch" element={<WatchWithMe/>} />
-            <Route path="/calc" element={<Calc />} />
-            <Route path="/Bomb" element={<Bomb />} />
+            <Route path={`${HOME_PAGE}/ip`} element={<Ip />} />
+            <Route path={`${HOME_PAGE}/watch`} element={<WatchWithMe/>} />
+            <Route path={`${HOME_PAGE}/calc`} element={<Calc />} />
+            <Route path={`${HOME_PAGE}/bomb`} element={<Bomb />} />
         </Routes>
-        {location.pathname !== '/' && location.pathname !== '/calc'  && 
-          <Link className='go-home-btn' to='/'>
-            <img src="/toolkit/images/home-icon.png" alt="Home" />
+        {location.pathname !== HOME_PAGE && !location.pathname.includes('/calc')  && 
+          <Link className='go-home-btn' to={HOME_PAGE}>
+            <img src="/toolkit/images/home-icon.png" alt="H" />
           </Link>
       }
     </>
