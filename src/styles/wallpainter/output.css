@@ -954,6 +954,7 @@ input.ip::placeholder {
   z-index: 0;
   flex: 1;
   height: 100%;
+  min-height: 500px;
 }
 .ip-container {
   padding-top: var(--ip-header-height);
@@ -1034,17 +1035,21 @@ unknown */
 
   .info-from-ip--container {
       background-color: none;
-      background: linear-gradient(var(--ip-info-background),var(--ip-info-background), rgba(255,255,255, 0.4) ,rgba(255,255,255, 0.4));
+      background: linear-gradient(var(--ip-info-background), rgba(255,255,255, 0.4) ,rgba(255,255,255, 0.4), var(--ip-info-background));
       grid-template-rows: repeat(4, 60px);
       grid-template-columns: repeat(1, 1fr);
       align-items: center;
       row-gap: 2px;
 
-      height: 250px;
+      height: -webkit-fit-content;
+
+      height: -moz-fit-content;
+
+      height: fit-content;
       width: 90vw;
 
       padding: 10px 3px;
-      margin-bottom: -200px;
+      margin-bottom: -100px;
   }
   .ip-info {
       align-items: center;
