@@ -423,6 +423,7 @@ form .form-main-div .btn-log-in.complete:hover {
   background-color: rgb(0, 0, 0);
 }
 form .form-main-div .btn-reset-pas {
+  font-size: 0.8rem;
   background-color: var(--color-1);
 }
 form .form-main-div .btn-reset-pas:hover {
@@ -462,6 +463,42 @@ form .form-main-div a.sign-up code {
   }
   25% {
     rotate: 1deg;
+  }
+}
+@media (max-width: 600px) {
+  form .form-main-div h1 {
+    margin-bottom: 10px;
+    /* font-weight: 900; */
+    font-size: 2rem;
+  }
+  form .form-main-div label input {
+    width: 250px;
+    height: 30px;
+  }
+  form .form-main-div label .before {
+    /* position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translate(0, -50%);
+    transition: all 150ms;
+    padding: 0 5px;
+    z-index: 1; */
+    font-size: 0.8rem;
+  }
+  form .form-main-div .btn-ui {
+    height: 20px;
+  }
+  form .form-main-div .btn-log-in {
+    margin-top: 5px;
+    font-size: 0.8rem;
+  }
+  form .form-main-div a.sign-up {
+    /* width: 100%; */
+    /* text-align: center; */
+    font-size: 0.8rem;
+  }
+  form .form-main-div a.sign-up code {
+    font-size: 0.8rem;
   }
 }
 
@@ -664,8 +701,23 @@ form .form-main-div a.sign-up code {
 }
 
 @media (max-width: 800px) {
+  .search .search-header .search-header--menu {
+    font-size: 1rem;
+  }
+  .search .search-header .search-header-username {
+    font-size: 1rem;
+  }
+  /* .search .search-for {
+    font-size: 1rem;
+  } */
+  .search .search-for + h1 {
+    font-size: 1.1rem;
+  }
   .search .search-for .search-for--text {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
+  }
+  .search .search-for .search-for--settings * {
+    font-size: 1rem;
   }
   .search .search-result-container {
     grid-template-columns: 1fr;
@@ -676,6 +728,9 @@ form .form-main-div a.sign-up code {
   }
 }
 @media (max-width: 500px) {
+  .search .search-header .search-header--logo {
+    width: 35px;
+  }
   .search .search-result-container {
     padding: 20px 0;
   }

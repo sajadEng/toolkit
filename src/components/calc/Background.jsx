@@ -13,8 +13,14 @@ function Background() {
     }
 
     const lengthList = []
-    for (let i = 0; i < 100; i++) {
-        lengthList.push(i);
+    if (window.innerWidth < 600)  {
+        for (let i = 0; i < 40; i++) {
+            lengthList.push(i);
+        }
+    } else {
+        for (let i = 0; i < 100; i++) {
+            lengthList.push(i);
+        }
     }
 
     return (

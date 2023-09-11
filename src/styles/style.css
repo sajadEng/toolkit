@@ -43,6 +43,10 @@ ul.main-header-menu li {
     font-size: 1.5rem;
     height: var(--main-header-height);
     padding: 0 15px;
+    min-width: 5ch;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 ul.main-header-menu li.games-links {
     position: relative;

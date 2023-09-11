@@ -58,8 +58,6 @@ function Login( {dispatch} ) {
         // 5: . does not come before @
         // 6: there is a letter between @ and .
 
-        // 
-
         const isOk = 
         // condition 0
         textLength >= 4 &&

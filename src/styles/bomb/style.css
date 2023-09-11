@@ -127,9 +127,9 @@ div.bomb-flags-count::before {
 }
 @media (max-width: 400px) {
 	div.bomb-container {
-		grid-template-columns: repeat(10, 25px);
-		grid-template-rows: repeat(10, 25px);
-		gap: 5px;
+		grid-template-columns: repeat(10, 9vw);
+		grid-template-rows: repeat(10, 9vw);
+		gap: 1px;
 	}
 	div.bomb-game-info-div {
 		font-size: 2rem;

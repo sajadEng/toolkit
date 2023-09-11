@@ -12,7 +12,10 @@ function Search({state, dispatch}) {
     
     // go to top button apear on scroll
     useEffect(function () {
-        window.onscroll = function() {scrollFunction()};
+        // window.onscroll = function() {scrollFunction()};
+        window.addEventListener('scroll', scrollFunction);
+
+        return () => window.removeEventListener('scroll', scrollFunction);
     }, [])
     
     function scrollFunction() {

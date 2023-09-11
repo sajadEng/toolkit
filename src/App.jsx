@@ -55,7 +55,7 @@ function App() {
             <Route path={`${HOME_PAGE}/calc`} element={<Calc />} />
             <Route path={`${HOME_PAGE}/bomb`} element={<Bomb />} />
         </Routes>
-        {location.pathname !== HOME_PAGE && !location.pathname.includes('/calc')  && 
+        {location.pathname !== HOME_PAGE && location.pathname !== `${HOME_PAGE}/` && !location.pathname.includes('/calc')  && 
           <Link className='go-home-btn' to={HOME_PAGE}>
             <img src="/toolkit/images/home-icon.png" alt="H" />
           </Link>

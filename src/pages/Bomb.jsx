@@ -21,7 +21,6 @@ function Bomb() {
         return () => clearInterval(timeIntrval)
     }, [])
 
-    // creaet background elements in mount
 
 
     // create cells in mount
