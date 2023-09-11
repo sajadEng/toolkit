@@ -132,7 +132,7 @@ div.bomb-flags-count::before {
 		gap: 1px;
 	}
 	div.bomb-game-info-div {
-		font-size: 2rem;
+		font-size: 1rem;
 	}
 	div.flaged-block::before {
 		font-size: 0.8rem;
@@ -144,8 +144,5 @@ div.bomb-flags-count::before {
 		grid-template-columns: repeat(10, 1fr);
 		grid-template-rows: repeat(10, 1fr);
 		gap: 2px;
-	}
-	div.bomb-game-info-div {
-		font-size: 2rem;
 	}
 }

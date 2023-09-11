@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 95vh;
+  min-height: 95vh;
   width: 100%;
   background: none;
   padding-top: 20px;

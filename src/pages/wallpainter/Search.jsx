@@ -62,8 +62,8 @@ function Search({state, dispatch}) {
     return (
         <div className="search">
             <div className="search-header">
-                <Link to={`${HOME_PAGE}/wallpainter`}>
-                    <img src="/toolkit/images/wallpainter/logo.png" className="search-header--logo"/>
+                <Link to={`/wallpainter`}>
+                    <img src="/images/wallpainter/logo.png" className="search-header--logo"/>
                 </Link>
                 <div className="search-header--menu">
                     <div className="search-header--menu__current">category: {query}&#x27F1;</div>
@@ -80,7 +80,7 @@ function Search({state, dispatch}) {
                     </div>
                 </div>
                 { isLogedIn ? <p className="search-header-username">{JSON.parse(localStorage.getItem('login')).username}</p> :
-                    <Link to={`${HOME_PAGE}/wallpainter/login`} className="search-header-username">Login</Link> }
+                    <Link to="/wallpainter/login" className="search-header-username">Login</Link> }
             </div>
             <h1 className="search-for">
                 <span className="search-for--text">{query} Wallpapers ({wallpapers.length})</span>
