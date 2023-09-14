@@ -44,19 +44,19 @@ function App() {
     return (
     <>
         <Routes>
-            <Route index element={<Homepage />} />
-            <Route path="wallpainter" element={<WallpainterLayout />}>
+            <Route path={`${HOME_PAGE}/`} element={<Homepage />} />
+            <Route path={`${HOME_PAGE}/wallpainter`} element={<WallpainterLayout />}>
                 <Route index element={<WallpainterHomepage isLogedIn={wallpainterState.isLogedIn} categories={wallpainterState.categories} dispatch={wallpainterDispatch} />} />
                 <Route path='login' element={<WallpainterLogin dispatch={wallpainterDispatch} />} />
                 <Route path='search' element={<WallpainterSearch dispatch={wallpainterDispatch} state={wallpainterState} />}  />
             </Route>
-            <Route path="/ip" element={<Ip />} />
-            <Route path="/watch" element={<WatchWithMe/>} />
-            <Route path="/calc" element={<Calc />} />
-            <Route path="/bomb" element={<Bomb />} />
+            <Route path={`${HOME_PAGE}/ip`} element={<Ip />} />
+            <Route path={`${HOME_PAGE}/watch`} element={<WatchWithMe/>} />
+            <Route path={`${HOME_PAGE}/calc`} element={<Calc />} />
+            <Route path={`${HOME_PAGE}/bomb`} element={<Bomb />} />
         </Routes>
-        {location.pathname !== '/' && !location.pathname.includes('/calc')  && 
-          <Link className='go-home-btn' to='/'>
+        {location.pathname !== `${HOME_PAGE}` && location.pathname !== `${HOME_PAGE}/` && !location.pathname.includes('/calc')  && 
+          <Link className='go-home-btn' to={HOME_PAGE}>
             <img src="/images/home-icon.png" alt="H" />
           </Link>
       }

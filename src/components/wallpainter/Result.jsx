@@ -3,10 +3,9 @@ function Result({wallpaper, dispatch}) {
     function handleDonwload() {
         const link = document.createElement('a');
         link.href = wallpaper.src;
-        link.download = getFileName(wallpaper.src);
+        link.download = '/images/wallpainter/wallpapers/Culture/wp2468695-culture-wallpapers.jpg';
         link.click();
 
-        
         function getFileName(src) {
             for (let i = src.length - 1; i >= 0; i--) {
                 if (src.charAt(i) === '/') return src.slice(i + 1)

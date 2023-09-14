@@ -6,9 +6,7 @@ import './styles/general.css';
 import './styles/style.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  // <React.StrictMode>
-    <BrowserRouter basename='/toolkit'>
+    <BrowserRouter>
       <App />
     </BrowserRouter>
-  // </React.StrictMode>,
 )
