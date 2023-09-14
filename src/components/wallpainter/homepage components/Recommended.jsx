@@ -48,7 +48,7 @@ function Recommended({ categories, dispatch }) {
                     categories.map(category => 
                         
                     <Link key={Math.floor(Math.random() * 10000000000)} className={`card ${!category.enabled ? 'disabled' : ''}`} to={`search?query=${category.name}`}>
-                        <img src={`/images/wallpainter/${imageAdresses[(category.name).toLowerCase()]}`} alt={category.name} />
+                        <img src={`/toolkit/images/wallpainter/${imageAdresses[(category.name).toLowerCase()]}`} alt={category.name} />
                         <p>{category.name}</p>
                     </Link>) 
                 }  

@@ -23,7 +23,7 @@ function Result({wallpaper, dispatch}) {
                     <p onClick={event => dispatch({type: 'like', payload: {id: wallpaper.id}})} className={wallpaper.liked ? 'liked' : ''} >
                         {wallpaper.liked ? '❤️' :'💔'}
                     </p>
-                    <img src="/images/wallpainter/download.svg" onClick={handleDonwload} />
+                    <img src="/toolkit/images/wallpainter/download.svg" onClick={handleDonwload} />
                 </div>
                 <span className="search-result--keys__artist">
                     {wallpaper.artist}

@@ -24,6 +24,11 @@ export default function WatchWithMe() {
   const [isOpen1, setIsOpen1] = useState(true);
   const [watched, setWatched] = useLocalStorageState([], "watched");
 
+  useEffect(function () {
+    console.log('nothing');
+    return () => document.title = 'Toolkit'
+  }, [])
+
   function handleSearch(result) {
     setQuery((cur) => result);
   }

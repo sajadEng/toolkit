@@ -63,7 +63,7 @@ function Search({state, dispatch}) {
         <div className="search">
             <div className="search-header">
                 <Link to={`${HOME_PAGE}/wallpainter`}>
-                    <img src="/images/wallpainter/logo.png" className="search-header--logo"/>
+                    <img src="/toolkit/images/wallpainter/logo.png" className="search-header--logo"/>
                 </Link>
                 <div className="search-header--menu">
                     <div className="search-header--menu__current">category: {query}&#x27F1;</div>

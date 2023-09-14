@@ -21,7 +21,6 @@ export default function MovieDetail({
   useEffect(
     function () {
       if (userRating) rateCountRef.current = rateCountRef.current + 1;
-      console.log(rateCountRef);
     },
     [userRating]
   );
@@ -106,7 +105,7 @@ export default function MovieDetail({
       document.title = title;
 
       return function () {
-        document.title = "usePopcorn";
+        document.title = "Toolkit";
       };
     },
     [title]
